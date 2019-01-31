@@ -5,10 +5,10 @@ require 'time'
 class Url < ApplicationRecord
 	include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
-	after_create :start_async_counter
 
 	validates :long_url , :short_url, presence: true
-	 
+  after_create :start_async_counter
+
   settings index: {
     number_of_shards: 1,
     number_of_replicas: 0,
