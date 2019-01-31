@@ -14,6 +14,6 @@ new domain entry (admin version)
 
     Domain.create(domain_name: domain_name_entered , short_domain: short_domain)
     return "short domain added"
-  end
+  end 
 
 end

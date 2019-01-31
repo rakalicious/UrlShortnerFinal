@@ -23,7 +23,6 @@ out = {"short_domain": "yt.ub",
     respond_to do |format|
       if @req_ans == false
         @req_ans = ""
-        puts "yahan wahan"
         flash.now[:error] = "Domain not registered"
         format.html {render 'urls/new'}
         format.json {render json: {"error" => "Domain not registered"}, status: :not_found}

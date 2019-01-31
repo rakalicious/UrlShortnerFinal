@@ -4,5 +4,6 @@ class ConversionsController < ApplicationController
   
   def index
     @conversion = Conversion.all
+    @conversion = @conversion.order(created_at: :asc).last(20)
   end  
 end

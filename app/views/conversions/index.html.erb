@@ -6,11 +6,16 @@
 </p>
 
 <ul>
+  <% list_count = 0 %>  
   <% @conversion.each do |conv| %>
     <li>
-      <h3>
+      <h4>
+        <% list_count += 1 %>
         <%= conv.date.to_s + " : " + conv.count.to_s %>
-      </h3>
+      </h4>
+      <% if list_count == 10 %>
+      <% break %>
+      <% end %>
     </li>
   <% end %>
 </ul>

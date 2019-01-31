@@ -19,7 +19,6 @@ signup using given values
   def self.signup_using_credentials(signup_params)
     md5_password = Digest::MD5.hexdigest(signup_params[:password])
     users = User.create({:username => signup_params[:username] , :password => md5_password , :email => signup_params[:email] , :name => signup_params[:fullname]})
-    #users.save
   end
 
 =begin
