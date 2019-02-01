@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-before_action :session_timeout, :is_session_over_yes, :is_session_over_no
+before_action :session_timeout
 MAX_SESSION_TIME = 10
 RANDOM_STRING_LENGTH = 7
 
@@ -8,6 +8,10 @@ RANDOM_STRING_LENGTH = 7
 checks if session allowed time is over
 =end
   def session_timeout
+    if session.key?("time") == false
+      session[:user] = "no"
+      session[:time] = Time.now
+    end
     if (Time.parse(DateTime.now.to_s) - Time.parse(session[:time].to_s))/60 > ApplicationController::MAX_SESSION_TIME
       session[:user] = "no"
     end

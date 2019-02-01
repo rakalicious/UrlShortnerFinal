@@ -24174,3 +24174,990 @@ TypeError (no implicit conversion of nil into String):
 app/helpers/domains_helper.rb:6:in `+'
 app/helpers/domains_helper.rb:6:in `get_domain_name_from_url'
 app/controllers/urls_controller.rb:21:in `long_to_short'
+Started GET "/" for 127.0.0.1 at 2019-02-01 10:53:48 +0530
+Started GET "/" for 127.0.0.1 at 2019-02-01 10:53:48 +0530
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rakesh/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/rakesh/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new_user as HTML
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (103.0ms)
+  Rendered users/new_user.html.erb within layouts/application (344.7ms)
+Completed 200 OK in 657ms (Views: 353.8ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 593ms (Views: 478.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-02-01 10:54:22 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m9Ky/4M6wYoTg9RQwMclIpg50MQr2NPA9oZnhFsGCQT6JKDT4XmVRrliMA0yIb8Cz7N63WaTLGvDavI9ae3JrA==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (46.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 134ms (Views: 24.5ms | ActiveRecord: 48.5ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2019-02-01 10:54:24 +0530
+Processing by UsersController#signup as HTML
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup_entry" for 127.0.0.1 at 2019-02-01 10:54:30 +0530
+Processing by UsersController#signup_entry as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uj69OTgDdc6EubY1/sgxb5afZbTik3og+dldK+TZqhiU+5IQzZr76QURQ1EXR06o/PAFa7y8eKytF1S2xN1jMA==", "username"=>"raka", "fullname"=>"Kaustubh Rakesh", "email"=>"kaustubhrakeshzen@gmail.com", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "commit"=>"signup"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kaustubhrakeshzen@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:37
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:21
+  [1m[36mUser Create (42.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["name", "Kaustubh Rakesh"], ["email", "kaustubhrakeshzen@gmail.com"], ["created_at", "2019-02-01 05:24:30.693795"], ["updated_at", "2019-02-01 05:24:30.693795"]]
+  ↳ app/models/user.rb:21
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:21
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 85ms (ActiveRecord: 51.4ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 10:54:30 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-02-01 10:54:37 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7sPPnL1kNpAAKLQli7JFIxVVJ1Mfvkm3oArnlRfsf8uPNd2w3ydiXKrJUHh5VN8DQt+NSlL1thyV5nIsJQe/Yw==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 11ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-02-01 10:54:37 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 22ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 10:55:43 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 1.6ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/helpers/domains_helper.rb:6:in `+'
+app/helpers/domains_helper.rb:6:in `get_domain_name_from_url'
+app/controllers/urls_controller.rb:21:in `long_to_short'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 10:56:11 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/helpers/domains_helper.rb:6:in `+'
+app/helpers/domains_helper.rb:6:in `get_domain_name_from_url'
+app/controllers/urls_controller.rb:21:in `long_to_short'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 10:56:33 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Unpermitted parameters: :format, :url
+Unpermitted parameters: :format, :url
+  [1m[36mDomain Load (42.5ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" = $1 LIMIT $2[0m  [["domain_name", "youtube"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:67
+Completed 404 Not Found in 90ms (Views: 0.2ms | ActiveRecord: 46.8ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 10:58:17 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 5.5ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: short_url_inp):
+  
+app/controllers/urls_controller.rb:67:in `url_params'
+app/controllers/urls_controller.rb:21:in `long_to_short'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:00:04 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Unpermitted parameters: :format, :url
+Unpermitted parameters: :format, :url
+  [1m[36mDomain Load (0.6ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" = $1 LIMIT $2[0m  [["domain_name", "youtube"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:67
+Completed 404 Not Found in 32ms (Views: 0.2ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:00:37 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/helpers/domains_helper.rb:6:in `+'
+app/helpers/domains_helper.rb:6:in `get_domain_name_from_url'
+app/controllers/urls_controller.rb:24:in `long_to_short'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:01:05 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Unpermitted parameters: :format, :url
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 3.8ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/helpers/domains_helper.rb:6:in `+'
+app/helpers/domains_helper.rb:6:in `get_domain_name_from_url'
+app/controllers/urls_controller.rb:24:in `long_to_short'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:06:41 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 2.8ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: short_url_inp):
+  
+app/controllers/urls_controller.rb:70:in `url_params'
+app/controllers/urls_controller.rb:21:in `long_to_short'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:07:01 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Unpermitted parameters: :format, :url
+Unpermitted parameters: :format, :url
+Unpermitted parameters: :format, :url
+  [1m[36mDomain Load (0.6ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" = $1 LIMIT $2[0m  [["domain_name", "youtube"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:67
+Completed 404 Not Found in 38ms (Views: 0.2ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:07:19 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: long_url_inp):
+  
+app/controllers/urls_controller.rb:70:in `url_params'
+app/controllers/urls_controller.rb:21:in `long_to_short'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:11:34 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 2.3ms)
+
+
+  
+ArgumentError (no time information in ""):
+  
+app/controllers/application_controller.rb:11:in `session_timeout'
+Started GET "/urls/new" for 127.0.0.1 at 2019-02-01 11:13:52 +0530
+Processing by UrlsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (no time information in ""):
+  
+app/controllers/application_controller.rb:11:in `session_timeout'
+Started GET "/" for 127.0.0.1 at 2019-02-01 11:14:04 +0530
+Processing by UsersController#new_user as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (no time information in ""):
+  
+app/controllers/application_controller.rb:11:in `session_timeout'
+Started GET "/" for 127.0.0.1 at 2019-02-01 11:14:08 +0530
+Processing by UsersController#new_user as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (no time information in ""):
+  
+app/controllers/application_controller.rb:11:in `session_timeout'
+Started GET "/" for 127.0.0.1 at 2019-02-01 11:14:14 +0530
+Processing by UsersController#new_user as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (no time information in ""):
+  
+app/controllers/application_controller.rb:11:in `session_timeout'
+Started GET "/" for 127.0.0.1 at 2019-02-01 11:17:39 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 18ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:17:52 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-02-01 11:17:57 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Filter chain halted as :is_session_over_yes rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2019-02-01 11:18:07 +0530
+Processing by SearchController#search as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Filter chain halted as :is_session_over_yes rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:18:07 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-02-01 11:18:12 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g9idL0HHYxy/wrZQBiHBS6nlnUs2mWRIQ2962WTzbQsLvXUYZ3nJwsjIjrXMRT4vth8B+T6DLLY81Wh6PQrdlg==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 67ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-02-01 11:18:12 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 18ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/logout" for 127.0.0.1 at 2019-02-01 11:18:15 +0530
+Processing by UrlsController#logout as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:18:15 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2019-02-01 11:18:19 +0530
+Processing by SearchController#search as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Filter chain halted as :is_session_over_yes rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:18:19 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:20:29 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 28ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-02-01 11:20:35 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Filter chain halted as :is_session_over_yes rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:20:35 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-02-01 11:20:41 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LLP+NkmsTESsTfPfNZiyEpR2jqhBDieoheozqTH7mXmk1hYBbxLmmttHyzr//E12i4wSGkkUb1b6UCEKaAIp5A==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 86ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-02-01 11:20:41 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 29ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/logout" for 127.0.0.1 at 2019-02-01 11:20:44 +0530
+Processing by UrlsController#logout as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:20:44 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2019-02-01 11:20:47 +0530
+Processing by SearchController#search as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Filter chain halted as :is_session_over_yes rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:20:47 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:23:09 +0530
+  
+ArgumentError (Before process_action callback :is_session_over_no has not been defined):
+  
+app/controllers/urls_controller.rb:3:in `<class:UrlsController>'
+app/controllers/urls_controller.rb:1:in `<main>'
+Started POST "/users/login" for 127.0.0.1 at 2019-02-01 11:24:21 +0530
+  
+ArgumentError (Before process_action callback :is_session_over_yes has not been defined):
+  
+app/controllers/users_controller.rb:4:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/users/login" for 127.0.0.1 at 2019-02-01 11:26:23 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z2XLLFUz3YPDm6smWyX2qbLZKEoeXailxg7Xo95GhwFHACMbc413XbSRk8ORQQnNrSO0+BZH4Fu5tMUAh783nA==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 73ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-02-01 11:26:23 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 26ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:26:30 +0530
+Processing by UsersController#new_user as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Filter chain halted as :is_session_over_no rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-02-01 11:26:30 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/logout" for 127.0.0.1 at 2019-02-01 11:26:43 +0530
+Processing by UrlsController#logout as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:26:43 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 32ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-02-01 11:26:48 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rlXqetLy9EFOApLCN34EnKu+weUuxZw8vJmJXrn8qRImMAJN9ExenzkIqif9Gvv4tERdVybf1MLDI5v94AUZjw==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-02-01 11:26:48 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:27:29 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Unpermitted parameters: :format, :url
+Unpermitted parameters: :format, :url
+Unpermitted parameters: :format, :url
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" = $1 LIMIT $2[0m  [["domain_name", "youtube"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:67
+Completed 404 Not Found in 19ms (Views: 0.2ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:28:04 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 3.1ms)
+
+
+  
+ArgumentError (no time information in ""):
+  
+app/controllers/application_controller.rb:14:in `session_timeout'
+Started GET "/domains/new" for 127.0.0.1 at 2019-02-01 11:30:17 +0530
+Processing by DomainsController#new as HTML
+  Rendering domains/new.html.erb within layouts/application
+  Rendered domains/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 18ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-02-01 11:30:19 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2019-02-01 11:30:20 +0530
+Processing by SearchController#search as HTML
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 21ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-02-01 11:30:22 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/logout" for 127.0.0.1 at 2019-02-01 11:30:24 +0530
+Processing by UrlsController#logout as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:30:24 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:31:27 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 5.6ms)
+
+
+  
+ArgumentError (no time information in ""):
+  
+app/controllers/application_controller.rb:15:in `session_timeout'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:32:09 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 1.9ms)
+
+
+  
+ArgumentError (no time information in ""):
+  
+app/controllers/application_controller.rb:16:in `session_timeout'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:32:40 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 2.3ms)
+
+
+  
+ArgumentError (no time information in ""):
+  
+app/controllers/application_controller.rb:16:in `session_timeout'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:32:51 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (no time information in ""):
+  
+app/controllers/application_controller.rb:16:in `session_timeout'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:33:18 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 4.9ms)
+
+
+  
+ArgumentError (no time information in ""):
+  
+app/controllers/application_controller.rb:16:in `session_timeout'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:33:55 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 2.0ms)
+
+
+  
+NoMethodError (undefined method `contains?' for #<ActionDispatch::Request::Session:0x00007feb458a68c0>):
+  
+app/controllers/application_controller.rb:15:in `session_timeout'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:34:43 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 2.5ms)
+
+
+  
+ArgumentError (no time information in ""):
+  
+app/controllers/application_controller.rb:16:in `session_timeout'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:35:04 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 4.1ms)
+
+
+  
+ArgumentError (no time information in ""):
+  
+app/controllers/application_controller.rb:16:in `session_timeout'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:35:25 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Unpermitted parameters: :format, :url
+Unpermitted parameters: :format, :url
+Unpermitted parameters: :format, :url
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" = $1 LIMIT $2[0m  [["domain_name", "youtube"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:67
+Completed 404 Not Found in 51ms (Views: 0.2ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:37:43 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Redirected to http://0.0.0.0:3000/users/new_user
+Filter chain halted as :is_session_over_yes rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:37:43 +0530
+Processing by UsersController#new_user as */*
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 33ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:38:13 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Redirected to http://0.0.0.0:3000/users/new_user
+Filter chain halted as :is_session_over_yes rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:38:13 +0530
+Processing by UsersController#new_user as */*
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 20ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:38:32 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Redirected to http://0.0.0.0:3000/users/new_user
+Filter chain halted as :is_session_over_yes rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:38:32 +0530
+Processing by UsersController#new_user as */*
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:38:42 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Redirected to http://0.0.0.0:3000/users/new_user
+Filter chain halted as :is_session_over_yes rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:38:42 +0530
+Processing by UsersController#new_user as */*
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 23ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:39:05 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Redirected to http://0.0.0.0:3000/users/new_user
+Filter chain halted as :is_session_over_yes rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:39:05 +0530
+Processing by UsersController#new_user as */*
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 18ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:39:23 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Unpermitted parameters: :format, :url
+Unpermitted parameters: :format, :url
+  [1m[36mDomain Load (0.5ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" = $1 LIMIT $2[0m  [["domain_name", "youtube"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:67
+Completed 404 Not Found in 8ms (Views: 0.2ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-02-01 11:40:21 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j3Qpiuqu+IcgrPk0lMdEM1EWraSdCY1+zZZJLksjSmYHEcG9zBBSWVemwdFeo7tXTuwxFpUTxYCyLFuNEtr6+w==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 32ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-02-01 11:40:21 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 24ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-02-01 11:40:29 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j3Qpiuqu+IcgrPk0lMdEM1EWraSdCY1+zZZJLksjSmYHEcG9zBBSWVemwdFeo7tXTuwxFpUTxYCyLFuNEtr6+w==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2019-02-01 11:40:30 +0530
+Processing by UsersController#signup as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Filter chain halted as :is_session_over_no rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-02-01 11:40:30 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/domains/new" for 127.0.0.1 at 2019-02-01 11:40:32 +0530
+Processing by DomainsController#new as HTML
+  Rendering domains/new.html.erb within layouts/application
+  Rendered domains/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 35ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/logout" for 127.0.0.1 at 2019-02-01 11:40:35 +0530
+Processing by UrlsController#logout as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:40:35 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/domains/new" for 127.0.0.1 at 2019-02-01 11:40:38 +0530
+Processing by DomainsController#new as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Filter chain halted as :is_session_over_yes rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-02-01 11:40:38 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:41:51 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"long_url_inp"=>"www.youtube.com/charmander", "url"=>{}}
+Unpermitted parameters: :format, :url
+Unpermitted parameters: :format, :url
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" = $1 LIMIT $2[0m  [["domain_name", "youtube"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:67
+Completed 404 Not Found in 6ms (Views: 0.2ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:50:07 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Completed 500 Internal Server Error in 312ms (ActiveRecord: 5.4ms)
+
+
+  
+NameError (undefined local variable or method `url_params' for #<UrlsController:0x00007feb45b108b8>
+Did you mean?  url_for):
+  
+app/controllers/urls_controller.rb:24:in `long_to_short'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:50:43 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Unpermitted parameters: :format, :url
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 2.3ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/helpers/domains_helper.rb:6:in `+'
+app/helpers/domains_helper.rb:6:in `get_domain_name_from_url'
+app/controllers/urls_controller.rb:24:in `long_to_short'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:51:17 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 3.4ms)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/urls_controller.rb:22:in `format'
+app/controllers/urls_controller.rb:22:in `long_to_short'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:51:27 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Unpermitted parameters: :format, :url
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 2.2ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/helpers/domains_helper.rb:6:in `+'
+app/helpers/domains_helper.rb:6:in `get_domain_name_from_url'
+app/controllers/urls_controller.rb:27:in `block in long_to_short'
+app/controllers/urls_controller.rb:21:in `long_to_short'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:51:58 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Unpermitted parameters: :format, :url
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 2.6ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/helpers/domains_helper.rb:6:in `+'
+app/helpers/domains_helper.rb:6:in `get_domain_name_from_url'
+app/controllers/urls_controller.rb:28:in `block in long_to_short'
+app/controllers/urls_controller.rb:21:in `long_to_short'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:52:18 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+No template found for UrlsController#long_to_short, rendering head :no_content
+Completed 204 No Content in 49ms (ActiveRecord: 3.2ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:52:27 +0530
+  
+SyntaxError (/Users/rakesh/UrlShortnerFinal/app/controllers/urls_controller.rb:28: syntax error, unexpected end, expecting '}'
+    end
+    ^~~
+/Users/rakesh/UrlShortnerFinal/app/controllers/urls_controller.rb:85: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/urls_controller.rb:28: syntax error, unexpected end, expecting '}'
+app/controllers/urls_controller.rb:85: syntax error, unexpected end-of-input, expecting end
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:52:46 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+No template found for UrlsController#long_to_short, rendering head :no_content
+Completed 204 No Content in 181ms (ActiveRecord: 3.2ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:52:57 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Unpermitted parameters: :format, :url
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 3.2ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/helpers/domains_helper.rb:6:in `+'
+app/helpers/domains_helper.rb:6:in `get_domain_name_from_url'
+app/controllers/urls_controller.rb:28:in `block in long_to_short'
+app/controllers/urls_controller.rb:21:in `long_to_short'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:53:23 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Unpermitted parameters: :format, :url
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 2.1ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/helpers/domains_helper.rb:6:in `+'
+app/helpers/domains_helper.rb:6:in `get_domain_name_from_url'
+app/controllers/urls_controller.rb:29:in `block in long_to_short'
+app/controllers/urls_controller.rb:21:in `long_to_short'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:56:10 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Completed 404 Not Found in 23ms (Views: 0.3ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:57:58 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 2.0ms)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/urls_controller.rb:46:in `format'
+app/controllers/urls_controller.rb:46:in `aaa'
+app/controllers/urls_controller.rb:25:in `block in long_to_short'
+app/controllers/urls_controller.rb:21:in `long_to_short'
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 11:59:51 +0530
+  
+SyntaxError (/Users/rakesh/UrlShortnerFinal/app/controllers/urls_controller.rb:93: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/urls_controller.rb:93: syntax error, unexpected end, expecting end-of-input
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 12:00:01 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Completed 0  in 2ms (Views: 0.3ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 12:00:31 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Completed 0  in 1ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 12:01:47 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Completed 404 Not Found in 3ms (Views: 0.3ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/urls/long_to_short.json" for 127.0.0.1 at 2019-02-01 12:02:49 +0530
+Processing by UrlsController#long_to_short as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/urls/short_to_long.json" for 127.0.0.1 at 2019-02-01 12:03:04 +0530
+Processing by UrlsController#short_to_long as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/urls_controller.rb:52:in `format'
+app/controllers/urls_controller.rb:52:in `short_to_long'
+Started GET "/urls/short_to_long.json" for 127.0.0.1 at 2019-02-01 12:04:06 +0530
+Processing by UrlsController#short_to_long as JSON
+  Parameters: {"url"=>{}}
+Unpermitted parameters: :format, :url
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+
+

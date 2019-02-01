@@ -1,5 +1,4 @@
 class DomainsController < ApplicationController
-  before_action :is_session_over_no, only: []
   before_action :is_session_over_yes, only: [:new]
   
   def new

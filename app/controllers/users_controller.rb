@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   include UsersHelper
   require 'time'
   before_action :is_session_over_no, only: [:new_user, :signup]
-  before_action :is_session_over_yes, only: []
 
 =begin
 starting pasge of the app , displays login page
